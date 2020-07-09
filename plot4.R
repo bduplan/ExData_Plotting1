@@ -24,7 +24,6 @@ idx <- range(which(pwr$Date >= as.Date("2007-02-01") &
 ## Index the data frame to the target date range
 pwr = pwr[idx[1]:idx[2], ]
 
-
 ## Since this plot is a time-history, convert Date and Time to a datetime
 DT <- as.POSIXlt(paste(pwr$Date, pwr$Time))
 
@@ -33,7 +32,6 @@ png(filename = "plot4.png", width = 480, height = 480, units = "px")
 par(mfcol = c(2,2))
 
 ## Re-make Plot 2
-
 plot(DT, pwr$Global_active_power, 
      xlab = "", ylab = "Global Active Power", 
      type = "l")
